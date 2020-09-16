@@ -1,10 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Quick Start
-### Npm
-- `npm install`
-- `npm start`
+## About
+A simple Todo App using React + Redux
 
-### Yarn
-- `yarn`
-- `yarn start`
+## Technical Uses
+- React
+- Redux
+- Redux Persist: Persit redux store
+- Lodash: JS utility library
+- Tailwindcss: Utility CSS framework
+
+## Quick Start
+#### Npm
+```bash
+npm install
+npm start
+```
+#### Yarn
+```bash
+yarn
+yarn start
+```
