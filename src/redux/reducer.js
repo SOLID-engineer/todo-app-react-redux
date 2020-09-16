@@ -1,9 +1,9 @@
 import { FILTER_ALL } from '../constants';
 import {
-  ADD_ITEM, CHANGE_FILTER, REMOVE_ITEM, TOOGLE_ITEM,
+  ADD_ITEM, CHANGE_FILTER, REMOVE_ITEM, TOGGLE_ITEM,
 } from './types';
 
-const initialState = {
+export const initialState = {
   filter: FILTER_ALL,
   items: [],
 };
@@ -16,7 +16,7 @@ function reducer(state = initialState, action) {
         ...state,
         items: [...state.items, { id: Date.now(), text: payload.text, completed: false }],
       };
-    case TOOGLE_ITEM:
+    case TOGGLE_ITEM:
       return {
         ...state,
         items: state.items.map((item) => {

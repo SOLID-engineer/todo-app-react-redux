@@ -1,10 +1,10 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-function TodoItem({ item, toogleItem, removeItem }) {
+function TodoItem({ item, toggleItem, removeItem }) {
   return (
     <div className="mb-2 p-3 border border-gray-300 text-gray-600 flex items-center justify-between">
-      <button onClick={() => toogleItem(item.id)} type="button" className="flex items-center focus:outline-none">
+      <button onClick={() => toggleItem(item.id)} type="button" className="flex items-center focus:outline-none">
         <i className={`rounded-full inline-block w-6 h-6 mr-3 ${item.completed ? 'bg-green-600' : 'bg-gray-400'}`} />
         <span className={item.completed ? 'line-through' : ''}>{item.text}</span>
       </button>
@@ -19,7 +19,7 @@ TodoItem.propTypes = {
     text: PropTypes.string,
     completed: PropTypes.bool,
   }).isRequired,
-  toogleItem: PropTypes.func.isRequired,
+  toggleItem: PropTypes.func.isRequired,
   removeItem: PropTypes.func.isRequired,
 };
 

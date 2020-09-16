@@ -3,7 +3,7 @@ import {
   createStore, compose,
 } from 'redux';
 import localStorage from 'redux-persist/lib/storage';
-import rootReducer from './redux/reducer';
+import rootReducer, { initialState } from './redux/reducer';
 
 const persistConfig = {
   key: 'root',
@@ -12,7 +12,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default function configureStore(initialState = {}) {
+export default function configureStore() {
   /* eslint-disable no-underscore-dangle */
   const store = createStore(
     persistedReducer,

@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import TodoItem from './TodoItem';
-import { toogleItem, removeItem } from '../../redux/actions';
+import { toggleItem, removeItem } from '../../redux/actions';
 
 const mapDispatchToProps = (dispatch) => ({
-  toogleItem: (id) => dispatch(toogleItem(id)),
+  toggleItem: (id) => dispatch(toggleItem(id)),
   removeItem: (id) => dispatch(removeItem(id)),
 });
 
